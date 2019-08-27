@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :books
+  resources :stores
   root 'home#index'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
+  resources :books
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login' 
