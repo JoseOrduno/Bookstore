@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Book:
+  = @stock.book_id
+p
+  strong Store:
+  = @stock.store_id
+p
+  strong Year:
+  = @stock.stock
+
+=> link_to 'Edit', edit_stock_path(@stock)
+'|
+=< link_to 'Back', stocks_path

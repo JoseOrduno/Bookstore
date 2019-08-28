@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :stores
   root 'home#index'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
   resources :books
+  resources :stocks
+  resources :stores
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login' 
